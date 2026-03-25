@@ -203,8 +203,22 @@ Enter the destination folder path: ```/mnt/c/Users/[NAMA-PC]/Downloads```
 //----------------------
 
 Jika muncul error HTTP 403, perbarui library dengan:
-bash
+
+```bash
 pip install --upgrade pytubefix
+```
+Jika jaringan Anda sering terputus dan Anda ingin menggunakan skrip Python khusus (init-conv-mp3.py) untuk menyimpan langsung ke folder Windows (/mnt/c/...), mari kita pastikan perintahnya efisien agar tidak mengulang file yang sudah ada
+
+```bash
+python3 init-conv-mp3.py --continue --no-overwrites -x --audio-format mp3 -o "/mnt/c/Users/R-PC/Downloads/%(title)s.%(ext)s" -a downloadUrls.txt
+```
+
+Tambahkan parameter ```--fragment-retries infinite``` agar skrip tidak menyerah saat internet mati-nyala:
+
+```bash
+python3 init-conv-mp3.py -a downloadUrls.txt -x --audio-format mp3 -o "/mnt/c/Users/R-PC/Downloads/%(title)s.%(ext)s" --continue --no-overwrites --fragment-retries infinite
+```
+Penting: Pastikan folder ```/mnt/c/Users/[NAMA-PC]/Downloads/``` sudah benar (perhatikan huruf besar/kecil pada nama user
 
 //----------------------
 
