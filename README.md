@@ -129,9 +129,9 @@ Enter the destination folder path: ```/mnt/c/Users/[NAMA-PC]/Downloads```
 
 ***Untuk Converter ke mp3***
 
-```sudo nano init-Conv-mp3.py```
+```sudo nano init-conv-mp3.py```
 
-```bash
+```python
 import os
 from pytubefix import YouTube
 
@@ -191,7 +191,7 @@ if __name__ == "__main__":
 Jalankan: 
 
 ```bash
-python3 init.py
+python3 init-conv-mp3.py
 ```
 
 Masukkan folder tujuan saat diminta. Contoh (untuk Windows):
