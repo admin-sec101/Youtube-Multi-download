@@ -64,7 +64,7 @@ console.log(urls);
 
 ***Buka Linux/WSL***
 
-Buat File 
+Buat file daftar URL: 
 ```bash
 sudo nano downloadUrls.txt
 ```
@@ -120,3 +120,24 @@ Jalankan:
 ```bash
 python3 init.py
 ```
+
+Masukkan folder tujuan saat diminta. Contoh (untuk Windows):
+
+Enter the destination folder path: ```/mnt/c/Users/[NAMA-PC]/Downloads```
+
+//-----------------------------------Mulai Medownload File Vodeo Youtube--------------------------------//
+
+//----------------------
+
+Jika muncul error HTTP 403, perbarui library dengan:
+bash
+pip install --upgrade pytubefix
+
+//----------------------
+
+Struktur File Rekomendasi
+Agar repositori Anda rapi, buat file .gitignore agar folder venv tidak ikut terupload:
+bash
+echo "venv/" >> .gitignore
+echo "downloadUrls.txt" >> .gitignore
+echo "__pycache__/" >> .gitignore
