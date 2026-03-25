@@ -135,9 +135,3 @@ pip install --upgrade pytubefix
 
 //----------------------
 
-Struktur File Rekomendasi
-Agar repositori Anda rapi, buat file .gitignore agar folder venv tidak ikut terupload:
-bash
-echo "venv/" >> .gitignore
-echo "downloadUrls.txt" >> .gitignore
-echo "__pycache__/" >> .gitignore
